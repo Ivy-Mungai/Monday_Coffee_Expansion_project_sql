@@ -18,18 +18,15 @@ ORDER BY population DESC
 
 2. **Total Revenue from Coffee Sales**  
    What is the total revenue generated from coffee sales across all cities in the last quarter of 2023?
-
-   ```sql
-   
-   SELECT
+```sql
+SELECT
      SUM(total) as total_revenue
 FROM sales
-WHERE sale_date BETWEEN '2023-10-01' AND '2023-12-31';
-``
-
-3. **Sales Count for Each Product**  
+WHERE sale_date BETWEEN '2023-10-01' AND '2023-12-31' ;
+```
+   
+4. **Sales Count for Each Product**  
    How many units of each coffee product have been sold?
-
 ```sql
 SELECT 
      p.product_name,
@@ -37,15 +34,14 @@ SELECT
 FROM products as p
 LEFT JOIN sales as s
 ON s.product_id = p.product_id
-GROUP BY 1
-
+GROUP BY 1 ;
 ```
 
 4. **Average Sales Amount per City**  
    What is the average sales amount per customer in each city?
 
-   ```sql
-   SELECT 
+```sql
+SELECT 
       c.city_name,
       SUM(s.total) AS total_sale,
       COUNT(DISTINCT s.customers_id) as total_customers,
@@ -57,8 +53,8 @@ LEFT JOIN sales as s
 ON cst.customers_id = s.customers_id
 GROUP BY 1
 ORDER BY 2 DESC;
-
 ```
+
 
 5. **City Population and Coffee Consumers**  
    Provide a list of cities along with their populations and estimated coffee consumers.
@@ -78,7 +74,7 @@ GROUP BY 1,2 ;
 6. **Top Selling Products by City**  
    What are the top 3 selling products in each city based on sales volume?
 
-   ```sql
+```sql
    CREATE TABLE products_rank
 AS
 SELECT 
@@ -100,7 +96,7 @@ GROUP BY 1,2 ;
 7. **Customer Segmentation by City**  
    How many unique customers are there in each city who have purchased coffee products?
 
-   ```sql
+```sql
    SELECT 
       c.city_name,
       COUNT(DISTINCT cst.customers_id) as unique_customers_per_city,
@@ -118,7 +114,7 @@ GROUP BY 1;
 8. **Average Sale vs Rent**  
    Find each city and their average sale per customer and avg rent per customer
 
-   ```sql
+```sql
    SELECT 
       c.city_name,
       c.estimated_rent,
@@ -139,7 +135,7 @@ ORDER BY 5 DESC;
 9. **Monthly Sales Growth**  
    Sales growth rate: Calculate the percentage growth (or decline) in sales over different time periods (monthly).
 
-   ```sql
+```sql
 
    WITH monthly_sales
 AS 
@@ -183,7 +179,7 @@ WHERE last_month_sale IS NOT NULL ;
 10. **Market Potential Analysis**  
     Identify top 3 city based on highest sales, return city name, total sale, total rent, total customers, estimated  coffee consumer
 
-    ```sql
+```sql
     SELECT 
       c.city_name,
       c.estimated_rent,
