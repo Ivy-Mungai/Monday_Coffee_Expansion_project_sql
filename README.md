@@ -59,7 +59,7 @@ ON cst.customers_id = s.customers_id
 GROUP BY 1
 ORDER BY 2 DESC;
 
-``
+```
 
 5. **City Population and Coffee Consumers**  
    Provide a list of cities along with their populations and estimated coffee consumers.
@@ -96,7 +96,7 @@ JOIN city as c
 ON c.city_id = cst.city_id
 GROUP BY 1,2 ;
 
-``
+```
 
 7. **Customer Segmentation by City**  
    How many unique customers are there in each city who have purchased coffee products?
@@ -114,7 +114,7 @@ ON s.customers_id = cst.customers_id
 WHERE s.product_id <= 14
 GROUP BY 1;
 
-``
+```
 
 8. **Average Sale vs Rent**  
    Find each city and their average sale per customer and avg rent per customer
@@ -135,7 +135,7 @@ ON cst.customers_id = s.customers_id
 GROUP BY 1,2
 ORDER BY 5 DESC;
 
-``
+```
 
 9. **Monthly Sales Growth**  
    Sales growth rate: Calculate the percentage growth (or decline) in sales over different time periods (monthly).
@@ -179,7 +179,7 @@ SELECT
 FROM growth_ratio 
 WHERE last_month_sale IS NOT NULL ;
 
-``
+```
 
 10. **Market Potential Analysis**  
     Identify top 3 city based on highest sales, return city name, total sale, total rent, total customers, estimated  coffee consumer
@@ -202,7 +202,7 @@ ON cst.customers_id = s.customers_id
 GROUP BY 1,2,7,8
 ORDER BY 3 DESC;
 
-``
+```
     
 
 ## Recommendations
