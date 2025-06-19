@@ -213,7 +213,7 @@ After analyzing the data, the recommended top three cities for new store opening
 1. Highest estimated coffee consumers at 7.7 million.  
 2. Highest total number of customers, which is 68.  
 3. Average rent per customer is 330 (still under 500).
-4. Highest Potentila in sales
+4. Highest Potential in sales
    
 **City 3: Chennai** 
 1. Offers a balance of high potential ad affordable rent 
