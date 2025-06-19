@@ -24,8 +24,7 @@ ORDER BY population DESC
    SELECT
      SUM(total) as total_revenue
 FROM sales
-WHERE sale_date BETWEEN '2023-10-01' AND '2023-12-31'
-
+WHERE sale_date BETWEEN '2023-10-01' AND '2023-12-31';
 ``
 
 3. **Sales Count for Each Product**  
